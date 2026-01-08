@@ -2,8 +2,8 @@
 
 ## Overview
 This repository has two primary branches:
-- **main**: Contains only the initial commit (a2d4924)
-- **master**: Contains all the actual project work (2 commits)
+- **main**: Contains only the initial commit
+- **master**: Contains all the actual project work
 
 As requested, the `main` branch should be deleted since all work is in the `master` branch.
 
@@ -62,13 +62,6 @@ You should only see `master` and any PR branches (like `copilot/delete-main-bran
 - **Default Branch:** Make sure to change the default branch to `master` BEFORE deleting `main`, otherwise GitHub might prevent the deletion or cause issues with cloning.
 - **Protected Branches:** If `main` is protected, you'll need to remove branch protection rules before deletion.
 - **Pull Requests:** Any open PRs targeting `main` will need to be retargeted to `master`.
-
-## Current Branch Status
-
-As of this analysis:
-- `main` branch commit: a2d4924 "Initial commit"
-- `master` branch latest commit: c7a6382 "Add build configuration and project documentation"
-- No files or work will be lost by deleting `main` since it only contains the initial commit
 
 ## After Deletion
 

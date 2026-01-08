@@ -3,10 +3,15 @@
 # Script to delete the main branch from the repository
 # This script helps automate the deletion of the main branch
 # Run this script with appropriate permissions
+#
+# Usage: ./delete-main-branch.sh [REPO]
+#   REPO: Optional repository in format owner/repo
+#         Defaults to: Jchin-1/EECS-1021-Plant-Watering-Project
 
 set -e
 
-REPO="Jchin-1/EECS-1021-Plant-Watering-Project"
+# Allow repository to be specified as argument or default to this repo
+REPO="${1:-Jchin-1/EECS-1021-Plant-Watering-Project}"
 
 echo "================================="
 echo "Delete Main Branch Script"
@@ -42,7 +47,10 @@ echo "All work should already be in the 'master' branch."
 echo ""
 read -p "Are you sure you want to continue? (yes/no): " confirm
 
-if [ "$confirm" != "yes" ]; then
+# Convert to lowercase for case-insensitive comparison
+confirm_lower=$(echo "$confirm" | tr '[:upper:]' '[:lower:]')
+
+if [[ "$confirm_lower" != "yes" && "$confirm_lower" != "y" ]]; then
     echo "Deletion cancelled."
     exit 0
 fi
