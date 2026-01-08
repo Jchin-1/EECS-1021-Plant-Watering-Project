@@ -30,8 +30,12 @@ if ! command -v gh &> /dev/null; then
     echo "ERROR: GitHub CLI (gh) is not installed."
     echo "Please install it from: https://cli.github.com/"
     echo ""
-    echo "Alternatively, use git command:"
+    echo "Alternative: If you have git configured with authentication,"
+    echo "you can delete the branch with:"
     echo "  git push origin --delete main"
+    echo ""
+    echo "Or use the GitHub web interface (see instructions in"
+    echo "DELETE_MAIN_BRANCH_INSTRUCTIONS.md)"
     exit 1
 fi
 
